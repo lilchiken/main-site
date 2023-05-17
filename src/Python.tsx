@@ -27,7 +27,7 @@ function Image({ id }: { id: number }) {
         ABCABCABCABCABCABCABCABCABCABCABCABCABCABCABCABCABCABCABCABCABCABCABCABCABCABCABC
       </div>
       <motion.div ref={ref} style={{ x: y }} className="python">
-        <img src={`/gif_python/frame_${id}_delay-0.1s.gif`} alt="A London skyscraper" />
+        <img src={require(`/public/images/gif_python/frame_${id}_delay-0.1s.gif`)} alt="A London skyscraper" />
       </motion.div>
     </section>
   );

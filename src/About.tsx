@@ -1,3 +1,4 @@
+import "./flower.css";
 import { useRef } from "react";
 import {
   motion,
@@ -23,7 +24,13 @@ export default function About({id}: {id: number}) {
   return (
     <section>
       <motion.div style={{ y }} className="About">
-          <div><img src="/IMG_7544-2.jpg" className="About"/></div>
+          <div>
+            <img
+              src={require("./IMG_7544-2.jpg")}
+              alt="bio"
+              className="About"
+            />
+          </div>
           <div className="BIO">
             Python'ом я заинтересовался ещё в школе, благодаря внеурочной деятельности. Тогда, он мне показался необычайно простым и невероятно интересным, по сравнению с остальными ЯП, с которыми я сталкивался (Basic, C++, Pascal). Позже свои знания в этой сфере я старался развивать в ВУЗе и это стало второй отправной точкой в мир программирования.<br></br><br></br>
             Вскоре, после поступления в ВУЗ, я устроился на свою первую IT профессию - "Системный администратор". И я понял, что хочу развиваться и работать в этой сфере.<br></br><br></br>

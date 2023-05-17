@@ -24,7 +24,7 @@ function Image({ id }: { id: number }) {
   return (
     <section>
       <motion.div ref={ref} style={{ opacity: opacity, y }} className="flower">
-        <img src={`/gif_tree/frame_${id}_delay-0.1s.png`} alt="A London skyscraper" />
+        <img src={require(`/public/images/gif_tree/frame_${id}_delay-0.1s.png`)} alt="Flower" />
       </motion.div>
     </section>
   );
