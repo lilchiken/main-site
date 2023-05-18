@@ -12,24 +12,28 @@ function useParallax(value: MotionValue<number>, distance: number) {
   return useTransform(value, [0, 1], [-distance, distance]);
 }
 
-export default function About({id}: {id: number}) {
+export default function AboutText({id}: {id: number}) {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({ target: ref });
-  const y = useParallax(scrollYProgress, 50);
+  const y = useParallax(scrollYProgress, 300);
 
-  const yRange = [0, 0.5, 1, 2]
-  const opacityRange = [0, 1, 0, 0]
+  const yRange = [-1, 0, 1, 2]
+  const opacityRange = [0, 1, 1, 0]
   const opacity = useTransform(scrollYProgress, yRange, opacityRange)
+
+  const elemToScroll = () => {
+    const elem = document.getElementById("work-exp")
+    if (elem) {
+      elem.scrollIntoView({ behavior: "smooth" })
+    };
+  };
 
   return (
     <section>
-      <motion.div ref={ref} style={{ x: y, opacity: opacity }} className="About">
-        <img
-          src={require("./IMG_7544-2.jpg")}
-          alt="bio"
-          className="About"
-        />
+      <motion.div ref={ref} style={{ x: y, opacity: opacity }}>
+        Ляляля
       </motion.div>
+      <button className="scroll-down" onClick={ elemToScroll }></button>
     </section>
   );
 }

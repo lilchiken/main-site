@@ -21,8 +21,8 @@ function Job({id}: {id: number}) {
   const y = useParallax(scrollYProgress, 0);
 
   return (
-    <section>
-      <motion.h2 style={{y}}>{words.at(id)}</motion.h2>
+    <section id="MyJob">
+      <motion.h2 ref={ref} style={{y}}>{words.at(id)}</motion.h2>
     </section>
   );
 }

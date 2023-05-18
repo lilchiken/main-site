@@ -21,10 +21,18 @@ function Image({ id }: { id: number }) {
   const opacityRange = [0, 0, 0, 1]
   const opacity = useTransform(scrollYProgress, yRange, opacityRange)
 
+  const elemToScroll = () => {
+    const elem = document.getElementById("MyJob")
+    if (elem) {
+      elem.scrollIntoView({ behavior: "smooth" })
+    };
+  };
+
   return (
     <section>
       <motion.div ref={ref} style={{ opacity: opacity, y }} className="flower">
         <img src={require(`/public/images/gif_tree/frame_${id}_delay-0.1s.png`)} alt="Flower" />
+        <button className="scroll-down" onClick={ elemToScroll }></button>
       </motion.div>
     </section>
   );

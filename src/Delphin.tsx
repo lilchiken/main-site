@@ -1,4 +1,5 @@
 import "./flower.css";
+import React from "react";
 import { useRef } from "react";
 import {
   motion,
@@ -6,7 +7,6 @@ import {
   useTransform,
   MotionValue,
 } from "framer-motion";
-import React from "react";
 
 function useParallax(value: MotionValue<number>, distance: number) {
   return useTransform(value, [0, 1], [-distance, distance]);
@@ -15,23 +15,30 @@ function useParallax(value: MotionValue<number>, distance: number) {
 function Image({ id }: { id: number }) {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({ target: ref });
-  const x = useParallax(scrollYProgress, 100);
-  const y = useParallax(scrollYProgress, -250)
+  const y = useParallax(scrollYProgress, -20);
 
   const yRange = [-1, 0.2, 0.5, 1]
   const opacityRange = [0, 0, 1, 0]
   const opacity = useTransform(scrollYProgress, yRange, opacityRange)
 
+  const elemToScroll = () => {
+    const elem = document.getElementById("work-exp")
+    if (elem) {
+      elem.scrollIntoView({ behavior: "smooth" })
+    };
+  };
+
   return (
-    <section className="pyth">
-      <motion.div ref={ref} style={{ y: y, x: x, opacity: opacity }} className="python">
-        <img src={require(`/public/images/gif_python/frame_${id}_delay-0.1s.gif`)} alt="A London skyscraper" />
+    <section className="delphin">
+      <motion.div ref={ref} style={{ opacity: opacity, x: y, y: y }} className="delphin">
+        <img src={require(`/public/images/gif_delphin/frame_0${id}_delay-0.1s.gif`)} alt="Flower" />
+        <button className="scroll-down" onClick={ elemToScroll }></button>
       </motion.div>
     </section>
   );
 }
 
-export default function Python() {
+export default function Delphin() {
   const arrayRange = (start: number, stop: number, step: number) =>
     Array.from(
     { length: (stop - start) / step + 1 },
@@ -40,7 +47,7 @@ export default function Python() {
 
   return (
     <>
-      {Array.from(Array(10).keys()).map((image) => (
+      {arrayRange(0, 9, 1).map((image) => (
         <Image id={image} />
       ))}
     </>

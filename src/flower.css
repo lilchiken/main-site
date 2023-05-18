@@ -157,7 +157,7 @@ section > div.flower {
   height: 400px;
   position: relative;
   max-height: 90vh;
-  margin: 30px;
+  /* margin: 30px; */
   background: var(--white);
   border: 1rem solid;
   border-radius: 9px;
@@ -165,8 +165,76 @@ section > div.flower {
   border-color: var(--black);
 }
 
+section.delphin {
+  background-color: #000000;
+  display: flex;
+  max-height: 90vh;
+  color: var(--white);
+  text-align: center;
+  align-items: center;
+  list-style-type: none;
+  /* position: fixed; */
+}
+
+section.delphin > h2 {
+  margin: 0;
+  color: var(--white);
+  left: 10%;
+  bottom: 70%;
+  font-size: 56px;
+  font-weight: 700;
+  /* letter-spacing: -3px; */
+  line-height: 1.2;
+  /* position: absolute; */
+}
+
+section.delphin > div.work {
+  align-items: center;
+}
+
+ol.delphin {
+  list-style-type: none;
+  text-align: center;
+}
+
+div.work > h2 {
+  margin: 0;
+  color: var(--white);
+  left: 10%;
+  bottom: 70%;
+  font-size: 56px;
+  font-weight: 700;
+  /* letter-spacing: -3px; */
+  line-height: 1.2;
+  /* position: absolute; */
+}
+
+div.work > h3 {
+  margin: 0;
+  color: var(--white);
+  left: 10%;
+  font-size: 24px;
+  font-weight: 700;
+  /* letter-spacing: -3px; */
+  line-height: 1.2;
+  /* position: absolute; */
+}
+
+section > div.delphin {
+  width: 50%;
+  height: 60%;
+  position: relative;
+  /* max-height: 90vh; */
+  /* margin: 30px; */
+  background: var(--black);
+  border: 1rem solid;
+  border-radius: 9px;
+  border-width: 4px;
+  border-color: var(--black);
+}
+
 img {
-  position: absolute;
+  position: relative;
   top: 0;
   left: 0;
   right: 0;
@@ -176,23 +244,24 @@ img {
 }
 
 img.About {
-  width: 30%;
-  height: 90%;
-  margin-left: 5%;
+  max-width: 35vw;
+  max-height: 90vh;
+  /* margin-left: 5%; */
 }
 
 section > div.About {
   font-size: 28px;
-  margin-left: 15%;
-  /* text-align: center; */
-  float:left;
-  padding-right: 50px;
-  padding-left: 50px;
+  position: relative;
+  /* margin-left: 15%; */
+  text-align: center;
+  /* float:left; */
+  /* padding-right: 50px;
+  padding-left: 50px; */
 }
 
-section > div.About > div.BIO {
+/* section > div.About > div.BIO {
   margin-left: 25%;
-}
+} */
 
 section.pyth {
   justify-items: baseline;
@@ -200,11 +269,11 @@ section.pyth {
 
 section > div.python {
   width: 50vw;
-  height: 40vh;
+  height: 50vh;
   position: relative;
-  margin: 30px;
+  /* margin: 30px;
   margin-bottom: 40%;
-  left: -20%;
+  left: -20%; */
   background: var(--white);
 }
 
