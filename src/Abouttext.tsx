@@ -21,19 +21,11 @@ export default function AboutText({id}: {id: number}) {
   const opacityRange = [0, 1, 1, 0]
   const opacity = useTransform(scrollYProgress, yRange, opacityRange)
 
-  const elemToScroll = () => {
-    const elem = document.getElementById("work-exp")
-    if (elem) {
-      elem.scrollIntoView({ behavior: "smooth" })
-    };
-  };
-
   return (
     <section>
       <motion.div ref={ref} style={{ x: y, opacity: opacity }}>
         Ляляля
       </motion.div>
-      <button className="scroll-down" onClick={ elemToScroll }></button>
     </section>
   );
 }

@@ -32,15 +32,9 @@ function Image({ id }: { id: number }) {
 }
 
 export default function Python() {
-  const arrayRange = (start: number, stop: number, step: number) =>
-    Array.from(
-    { length: (stop - start) / step + 1 },
-    (value, index) => start + index * step
-    );
-
   return (
     <>
-      {Array.from(Array(10).keys()).map((image) => (
+      {Array.from(Array(5).keys()).map((image) => (
         <Image id={image} />
       ))}
     </>

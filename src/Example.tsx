@@ -17,8 +17,8 @@ function Image({ id }: { id: number }) {
   const { scrollYProgress } = useScroll({ target: ref });
   const y = useParallax(scrollYProgress, -250);
 
-  const yRange = [-1, 0.2, 0.3, 0.5]
-  const opacityRange = [0, 0, 0, 1]
+  const yRange = [-1, 0.2, 0.5, 1]
+  const opacityRange = [0, 0, 1, 0]
   const opacity = useTransform(scrollYProgress, yRange, opacityRange)
 
   const elemToScroll = () => {
@@ -32,8 +32,8 @@ function Image({ id }: { id: number }) {
     <section>
       <motion.div ref={ref} style={{ opacity: opacity, y }} className="flower">
         <img src={require(`/public/images/gif_tree/frame_${id}_delay-0.1s.png`)} alt="Flower" />
-        <button className="scroll-down" onClick={ elemToScroll }></button>
       </motion.div>
+      <motion.button className="scroll-down" style={{ y: y, opacity: opacity }} onClick={ elemToScroll }>Обо мне</motion.button>
     </section>
   );
 }

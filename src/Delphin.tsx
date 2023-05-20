@@ -32,8 +32,8 @@ function Image({ id }: { id: number }) {
     <section className="delphin">
       <motion.div ref={ref} style={{ opacity: opacity, x: y, y: y }} className="delphin">
         <img src={require(`/public/images/gif_delphin/frame_0${id}_delay-0.1s.gif`)} alt="Flower" />
-        <button className="scroll-down" onClick={ elemToScroll }></button>
       </motion.div>
+      <motion.button className="scroll-down" style={{ opacity: opacity, x: y, y: y }} onClick={ elemToScroll }>Опыт работы</motion.button>
     </section>
   );
 }

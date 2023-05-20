@@ -9,21 +9,25 @@ import AboutText from "./Abouttext";
 import Python from "./Python"
 import Delphin from "./Delphin";
 import WorkExp from "./WorkExp";
-// import App from "./components/Stack"
+import App from "./Stack";
+import PythonStack from "./PythonStack";
+import Warning from "./Warning";
 
 const rootElement = document.getElementById("root");
 const root = ReactDOMClient.createRoot(rootElement);
 
 root.render(
   <StrictMode>
+    <Warning />
     <Header />
+    <PythonStack />
     <Example />
+    <App />
     <MyJob />
     <About />
     <AboutText />
-    <Delphin />
+    {/* <Delphin /> */}
     <WorkExp />
     <Python />
-    {/* <App /> */}
   </StrictMode>
 );

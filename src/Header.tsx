@@ -26,8 +26,8 @@ export default function Header() {
     <section>
       <section>
         <motion.h2 style={{y}}>Привет.</motion.h2>
-        <button className="scroll-down" onClick={ elemToScroll }></button>
       </section>
+      <button className="scroll-down" onClick={ elemToScroll }>Обо мне</button>
     </section>
   );
 }
