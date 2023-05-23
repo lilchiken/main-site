@@ -58,10 +58,25 @@ p {
 button.scroll-down {
   position: absolute;
   display: inline-block;
-  padding: .375rem .75rem;
   margin-left: 60vw;
-  align-items: center;
+  /* align-items: center; */
+  font-weight: bold;
+  padding: 0.25em 0.5em;
+  border-bottom: solid 3px black;
+  border-left: solid 3px black;
+  border-right: solid 3px white;
+  border-top: solid 3px white;
+  color: black;
+  background-color: var(--white);
+  transition: .05s;
+  font-size: 22px;
 }
+
+button.scroll-down:hover {
+  padding-left: 0.7em;
+  padding-right: 0.3em;
+}
+
 
 code {
   font-family: input-mono, monospace;
@@ -139,7 +154,6 @@ section.delphin {
   text-align: center;
   align-items: center;
   list-style-type: none;
-  /* position: fixed; */
 }
 
 section.delphin > h2 {
@@ -200,37 +214,23 @@ section > div.delphin {
 }
 
 img {
-  position: relative;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
   width: 100%;
   height: 100%;
 }
 
 img.About {
-  max-width: 35vw;
-  max-height: 90vh;
-  /* margin-left: 5%; */
+  width: 80%;
+  height: 100%;
+  border-radius: 100px;
 }
-
-section > div.About {
-  font-size: 28px;
-  position: relative;
-  /* margin-left: 15%; */
-  text-align: center;
-  /* float:left; */
-  /* padding-right: 50px;
-  padding-left: 50px; */
-}
-
-/* section > div.About > div.BIO {
-  margin-left: 25%;
-} */
 
 section.pyth {
   justify-items: baseline;
+}
+
+div.python > h2 {
+  font-size: 56px;
+  margin-top: 15px;
 }
 
 section > div.python {
@@ -264,4 +264,58 @@ canvas {
   image-rendering: -webkit-optimize-contrast;
   image-rendering: pixelated;
   image-rendering: optimize-contrast;
+}
+
+div.stack {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.py-obj {
+  font-family: Menlo, Monaco, 'Courier New', monospace;
+  color: orange;
+}
+
+.py-reswords {
+  font-family: Menlo, Monaco, 'Courier New', monospace;
+  color: crimson;
+}
+
+.py-func {
+  font-family: Menlo, Monaco, 'Courier New', monospace;
+  color: orchid;
+}
+
+.py-vars {
+  font-family: Menlo, Monaco, 'Courier New', monospace;
+  color: lightslategrey;
+}
+
+.py-brackets {
+  font-family: Menlo, Monaco, 'Courier New', monospace;
+  color: darkturquoise;
+}
+
+.py-string {
+  font-family: Menlo, Monaco, 'Courier New', monospace;
+  color: #9ACD32;
+}
+
+.py-text {
+  font-family: Menlo, Monaco, 'Courier New', monospace;
+  color: black
+}
+
+.py-feature {
+  font-family: Menlo, Monaco, 'Courier New', monospace;
+  color: var(--background);
 }

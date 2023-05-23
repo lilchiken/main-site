@@ -1,4 +1,3 @@
-import "./flower.css";
 import * as THREE from "three";
 import { Canvas, useThree, useFrame } from "@react-three/fiber";
 import React, { useRef, useLayoutEffect } from "react";
@@ -6,7 +5,7 @@ import { useTime } from "framer-motion";
 import { degreesToRadians, progress, mix } from "popmotion";
 import { Mesh, BufferGeometry } from "three";
 
-const color = "#111111";
+const color = "white";
 
 const Icosahedron = () => (
   <mesh rotation-x={0.7}>
@@ -67,13 +66,16 @@ function Scene({ numStars = 220 }) {
 
 export default function App() {
 
-return (
-  <section className="animate">
-  <div className="container">
-    <Canvas gl={{ antialias: false }}>
-      <Scene />
-    </Canvas>
-  </div>
-  </section>
-);
+  return (
+    <>
+    <section className="delphin" style={{ height: "10vh" }} />
+    <section className="delphin">
+      <div className="container">
+        <Canvas gl={{ antialias: false }}>
+          <Scene />
+        </Canvas>
+      </div>
+    </section>
+    </>
+  );
 }
