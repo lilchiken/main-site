@@ -20,7 +20,7 @@ export default function Warning() {
     <section className="delphin" style={{ margin: "auto", fontSize: "24px" }}>
       <div>
         <h2 />Не адаптировано к мобильной вёрстке.
-        <h2 /><a href="https://github.com/lilchiken/main-site/blob/main/public/resume/resumesample" style={{ color: "white" }}>Скачать/посмотреть резюме в PDF</a>
+        <h2 /><a href="https://github.com/lilchiken/main-site/blob/main/public/resume/public/resume/Ilia-Andryuhin-Python-Developer.pdf" style={{ color: "white" }}>Скачать/посмотреть резюме в PDF</a>
       </div>
     </section>
     )
